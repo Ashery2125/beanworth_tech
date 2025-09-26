@@ -1,0 +1,409 @@
+.App {
+  position: relative;
+  text-align: center;
+  padding-top: 30px;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  z-index: 3rem;
+  background-size: cover;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 25%, #dee2e6 50%, #ced4da 75%, #adb5bd 100%);
+  min-height: 100vh;
+  box-shadow: inset 0 0 0 2000px rgba(26, 42, 108, 0.05);
+}
+.App::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(135deg, rgba(26, 42, 108, 0.1), rgba(178, 31, 31, 0.05), rgba(253, 187, 45, 0.08));
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: calc(10px + 2vmin);
+  padding: 40px 2rem;
+  max-width: 1400px;
+}
+
+.App-logo {
+      width: 180px;
+      height: 120px;
+      margin: 20px auto 30px auto;
+      filter: drop-shadow(0 4px 8px rgba(59, 25, 17, 0.2));
+      transition: transform 0.3s ease;
+}
+
+.App-logo:hover {
+      transform: scale(1.05);
+}
+
+
+.profile-box {
+  display: inline-block;
+  padding: 12px;
+  border: 2px solid #853d1c;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 180px;
+  height: 180px;
+  background-color: #f5f5f5;
+  margin-top: 15px;
+}
+li {
+  list-style: none;
+  margin: 5px 0;
+}
+
+.global-footer {
+  background: linear-gradient(135deg, #542317, #b21f1f, #fdbb2d);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+  font-weight: 500;
+}
+.App-link {
+  margin-top: 20px;
+  display: inline-block;
+  color: #0331ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: clamp(10px, 1.5vw, 18px);
+  margin: 30px auto;
+  max-width: 1000px;
+  padding: clamp(20px, 4vw, 30px);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(253, 187, 45, 0.1);
+}
+
+.list {
+  color: #ffffff;
+  width: 80%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(80, 32, 22, 0.8), rgba(185, 78, 6, 0.6));
+  border-radius: 12px;
+  margin: clamp(8px, 2vw, 12px) 0;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  padding: 25px 20px;
+  min-height: 120px;
+}
+
+.list:hover {
+  background: linear-gradient(135deg, rgba(115, 60, 16, 0.9), rgba(255, 102, 0, 0.8));
+  box-shadow: 0 15px 40px rgba(253, 187, 45, 0.3);
+  transform: translateY(-8px) scale(1.03);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+
+.profile-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+ul {
+  text-align: left;
+  max-width: 400px;
+  margin-top: 1rem;
+}
+
+.center {
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(62, 26, 21, 0.95), rgba(42, 38, 38, 0.9));
+  margin: 10px;
+  text-align: left;
+  width: 100%;
+  height: 100px;
+  border-radius: 15px;
+  color: #fcfcfd;
+  font-size: medium;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.center h2 {
+  color: #fdbb2d;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.contact-infor {
+  margin-left: 2.5rem;
+  flex-wrap: wrap;
+}
+.social-links {
+      text-align: center;
+      margin: 2rem 0 1rem 0;
+      color: rgb(19, 206, 206);
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin: 0 10px;
+      transition: transform 0.3s ease;
+      
+    }
+
+    .social-links a:hover {
+      transform: scale(1.5);
+      color: rgb(8, 157, 72);
+    }
+
+    .social-links img {
+      width: 32px;
+      height: 32px;
+      filter: invert(2);
+    }
+    .global-footer {
+      background: linear-gradient(135deg, #562319, #b21f1f, #fdbb2d);
+      color: #fff;
+      text-align: center;
+      padding: 15px 1rem;
+      position: fixed;
+      z-index: 1000;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      font-weight: 500;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .contactpage {
+      background-size: cover;
+    }
+
+    .contactinf {
+      background-color: #d6d7dc00;
+    }
+    
+    .bx1:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    color: #421e16;
+    }
+    .bx2:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    color: #421e16;
+    }
+    .bx3:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    color: #421e16;
+    }
+    .bx4:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    color: #421e16;
+    }
+    
+    
+/* Desktop Navigation - Hide on mobile */
+.desktop-nav {
+  display: flex !important;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  
+}
+
+/* Mobile Toggle Button - Show only on mobile */
+.mobile-toggle {
+  display: none !important;
+}
+
+.mobile-slide {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .mobile-toggle {
+    display: flex !important;
+  }
+  
+  .mobile-slide {
+    display: block !important;
+  }
+}
+
+    /* Tablet Styles */
+    @media (max-width: 1024px) {
+      .App-header {
+        padding: 30px 1.5rem;
+        font-size: calc(8px + 2vmin);
+      }
+      
+      .App-logo {
+        width: 160px;
+        height: 110px;
+      }
+      
+      .service-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        overflow-wrap: break-word;
+
+        padding: 35px;
+        gap: 14px;
+      }
+      
+      .list {
+        padding: 18px 12px;
+        flex-wrap: wrap;
+        gap: 10px;
+        overflow-wrap: break-word;
+        max-width: 70%;
+        min-height: 100px;
+      }
+    }
+    
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .App-header {
+        font-size: calc(6px + 2vmin);
+        padding: 20px 1rem;
+      }
+      
+      .App-logo {
+        width: 140px;
+        height: 90px;
+        margin: 15px auto 20px auto;
+      }
+      
+      .service-list {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 200px min kwa mobile */
+       gap: clamp(8px, 2.5vw, 18px);
+       margin: 20px auto;
+       padding: clamp(15px, 3vw, 25px);
+       max-width: 100%;
+}
+      
+      .list {
+        padding: 18px 12px;
+        min-height: 90px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.9rem;
+      }
+      
+      .center {
+        padding: 15px;
+        margin: 8px;
+        border-radius: 12px;
+      }
+      
+      .contact-infor {
+        margin-left: 1rem;
+      }
+      .App-logo{
+        display: block;
+      }
+    }
+    
+    /* Desktop Navigation Styles */
+.desktop-nav {
+  display: flex !important;
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  .App {
+    padding-top: 20px !important;
+  }
+  .App-logo{
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu-button {
+    display: none !important;
+  }
+  .App-logo{
+    display: block;
+  }
+}
+    /* Small Mobile Styles */
+    @media (max-width: 480px) {
+      .App-header {
+        padding: 15px 0.8rem;
+      }
+      
+      .App-logo {
+        width: 120px;
+        height: 80px;
+        margin: 10px auto 15px auto;
+      }
+      
+      
+      .service-list {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px 15px;
+        gap: 12px;
+        margin: 20px auto;
+      }
+      
+      .list {
+        padding: 12px 10px;
+        
+        min-height: 80px;
+        font-size: 0.80rem;
+      }
+      
+      .center {
+        padding: 12px;
+        margin: 5px;
+        font-size: 0.9rem;
+      }
+      
+      .contact-infor {
+        margin-left: 0.5rem;
+      }
+      
+      .social-links {
+        margin: 1.5rem 0 0.8rem 0;
+      }
+      
+      .social-links img {
+        width: 28px;
+        height: 28px;
+      }
+
+    }
+   

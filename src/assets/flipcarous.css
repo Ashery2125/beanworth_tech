@@ -1,0 +1,371 @@
+.flip-carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  gap: 20px;
+  position: relative;
+}
+
+.flip-card {
+  width: 56em;
+  height: 550px;
+  perspective: 1000px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.436);
+  border: 2px solid #000000;
+  position: relative;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.flip-card-image {
+  margin-left: 0 1rem;
+  margin-right: 0 1rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.6s ease-in-out;
+}
+
+.flip-card-image:hover {
+  transform: scale(1.05);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  border: 3px solid #007bff;
+  user-select: none;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-button {
+  background: linear-gradient(135deg, #ff6600, #ff8800);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+  z-index: 200;
+}
+
+.nav-button:hover {
+  background: linear-gradient(135deg, #ff8800, #ffaa00);
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(255, 102, 0, 0.5);
+}
+
+.nav-button:active {
+  transform: scale(0.95);
+}
+
+.download-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #28a745, #20c997);
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(40, 167, 69, 0.3);
+  z-index: 150;
+}
+
+.download-button:hover {
+  background: linear-gradient(135deg, #20c997, #17a2b8);
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.5);
+}
+
+.overlay-title {
+  color: white;
+  font-size: 0.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(55, 25, 145, 0.8);
+  margin: 0;
+  padding: 15px;
+  background-color: rgba(85, 80, 95, 0.222);
+  
+  animation: fadeInUp 0.6s ease-out;
+  cursor: pointer; 
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+.overlay-title:hover {
+  background-color: rgba(48, 14, 183, 0.385);
+  transform: scale(1.05);
+  text-shadow: 3px 3px 6px rgba(20, 4, 100, 0.9);
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.overlay-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(36, 7, 96, 0.8);
+  margin: 0;
+  padding: 20px;
+  animation: fadeInUp 0.6s ease-out;
+  cursor: pointer; 
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+.overlay-title:hover {
+  background-color: rgba(42, 6, 96, 0.403);
+  transform: scale(1.05);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+}
+
+
+.services-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.services-modal {
+  background: rgb(17, 7, 36);
+  border-radius: 20px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.4s ease-out;
+}
+
+.services-header {
+  background: linear-gradient(135deg, #e6d9d4c5, #db8f7171);
+  color: white;
+  padding: 20px;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.services-header h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.services-content {
+  padding: 30px;
+  display: grid;
+  gap: 25px;
+}
+
+.service-item {
+  padding: 20px;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.service-item:hover {
+  border-color: #ff5500;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.service-item h3 {
+  color: #ff7700;
+  margin: 0 0 10px 0;
+  font-size: 1.3rem;
+}
+
+.service-item p {
+  color: #6c757d;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.services-footer {
+  background: #f8f9fa;
+  padding: 20px 30px;
+  border-radius: 0 0 15px 15px;
+  text-align: center;
+  border-top: 1px solid #e9ecef;
+}
+
+.services-footer p {
+  margin: 0 0 15px 0;
+  color: #6c757d;
+}
+
+.visit-website-btn {
+  display: inline-block;
+  background: #ff6600;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.visit-website-btn:hover {
+  background: #b34e00;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 89, 0, 0.3);
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .flip-carousel-container {
+    width: 100%;
+    height: 70%;
+    gap: 10px;
+  }
+  
+  .flip-card {
+    width: 100%;
+    max-height: 300px;
+  }
+  
+  .nav-button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+  
+  .download-button {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .services-modal {
+    width: 95%;
+    margin: 10px;
+  }
+
+  .services-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .services-content {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .service-item {
+    padding: 15px;
+  }
+
+  .overlay-title {
+    font-size: 2rem;
+    padding: 15px;
+  }
+}

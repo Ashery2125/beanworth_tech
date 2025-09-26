@@ -1,0 +1,29 @@
+/* Global Reset & Font Setup */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Helvetica Neue', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Code Blocks */
+code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #eee;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+/* Anchor Styles */
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
